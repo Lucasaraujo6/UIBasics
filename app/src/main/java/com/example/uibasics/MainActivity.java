@@ -6,8 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnHello:
+                Toast.makeText(this, "Welcome to my aplication", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnHello = findViewById(R.id.btnHello);
 
-        btnHello.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println("Hello");
-            }
-        });
+        btnHello.setOnClickListener(this);
+
     }
 
 
