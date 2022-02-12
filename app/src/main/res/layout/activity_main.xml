@@ -4,14 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="100dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnHello"
+        android:layout_centerHorizontal="true"
+        android:hint="Your text here."
+        android:inputType="datetime"
+        android:lines="2"
+        android:textStyle="bold|italic"
+        android:id="@+id/edtTxtHello" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:layout_below="@id/btnHello"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         android:textColor="@color/design_default_color_primary"
@@ -20,13 +33,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtWelcome"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@color/teal_700"
         android:textColor="#1dd12c"
         android:text="Say Hello"
         android:id="@+id/btnHello"/>
+
+
 
 
 </RelativeLayout>
