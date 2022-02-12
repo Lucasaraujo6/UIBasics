@@ -26,7 +26,7 @@
         android:background="@color/teal_700"
         android:textColor="#1dd12c"
         android:text="Say Hello"
-        android:onClick="onHelloBtnCLicked" />
+        android:id="@+id/btnHello"/>
 
 
 </RelativeLayout>
